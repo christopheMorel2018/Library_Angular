@@ -10,7 +10,7 @@ export class AppComponent {
   
   constructor(){
     var config = {
-      apiKey: "AIzaSyAMKi8NzV_qya3bWqxs_16q1KWTTYun-Uo",
+      apiKey: "protected",
       authDomain: "library-54528.firebaseapp.com",
       databaseURL: "https://library-54528.firebaseio.com",
       projectId: "library-54528",
