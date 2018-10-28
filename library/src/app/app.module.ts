@@ -20,10 +20,11 @@ import { BookService } from './services/book.service';
 const routes: Routes = [
   { path: 'auth/signup', component: SignUpComponent },
   { path: 'auth/signin', component: SignInComponent },
-  { path: 'books', component: BookListComponent },
-  { path: 'books/edit', component: BookFormComponent },
-  { path: 'books/:id', component: BookSingleComponent },
-  { path: '', component: SignInComponent  },
+  { path: 'books', canActivate: [AuthGuardService], component: BookListComponent },
+  { path: 'books/new', canActivate: [AuthGuardService], component: BookFormComponent },
+  { path: 'books/view/:id', canActivate: [AuthGuardService], component: BookSingleComponent },
+  { path: '', component: SignInComponent },
+  {path: '**', redirectTo: '/auth/signin'},
   
 ];
 

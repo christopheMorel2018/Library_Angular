@@ -1,3 +1,19 @@
-<p>
-  Page pour créer un compte
-</p>
+<div class="row">
+<div class="col-sm-8 col-sm-offset-2">
+  <h2>Créer un compte</h2>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" class="form-control" formControlName="email">
+    </div>
+    <div class="form-group">
+      <label for="password">Mot de passe</label>
+      <input type="password" id="password" class="form-control" formControlName="password">
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit" [disabled]="userForm.invalid">Enregistrer</button>   
+    </div>
+  </form>
+  <p class="text-danger">{{errorMessage}}</p>
+</div>
+</div>

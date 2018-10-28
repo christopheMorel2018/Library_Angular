@@ -1,3 +1,8 @@
-<p>
-  book-single works!
-</p>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ book.title }}</h1>
+    <h3>{{ book.author }}</h3>
+    <p style="text-align: justify; text-indent: 15px">{{ book.synopsis }}</p>
+    <button class="btn btn-default" (click)="onBack()">Retour</button>
+  </div>
+</div>
